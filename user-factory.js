@@ -70,7 +70,6 @@ User.prototype.checkCompartmentPrice = function(machine, compartment) {
  */
 User.prototype.buyProduct = function(machine, compartment) {
     const resultOfMachine = machine.buttonPress(compartment);
-    console.log(resultOfMachine);
     if (resultOfMachine.product) {
         this.products.push(resultOfMachine.product);
         this.cash += this.convertChangeToCash(resultOfMachine.change);
